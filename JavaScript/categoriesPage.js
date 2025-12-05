@@ -1,8 +1,3 @@
-let start_quize_btn = document.querySelector('#start_quize');
-start_quize_btn.addEventListener("click", () => {
-    window.location.href = "/Pages/categoriesPage.html";  
-});
-
 let card_1 = document.querySelector('#card-1');
 let card_2 = document.querySelector('#card-2');
 let card_3 = document.querySelector('#card-3');
@@ -18,5 +13,4 @@ card_3.addEventListener("click", () => {
     let category = "sql";
     window.location.href = `/Pages/startQuizPage.html?category=${encodeURIComponent(category)}`;
 });
-
 

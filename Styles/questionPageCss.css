@@ -1,0 +1,185 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Playwrite IT Moderna", cursive;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .quiz-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .question-counter {
+            font-size: 16px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #a855f7 0%, #8b5cf6 100%);
+            width: 30%;
+            transition: width 0.3s ease;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .question-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+
+        .question-text {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .answers-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .answer-option {
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 18px 24px;
+            font-size: 14px;
+            color: #374151;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Courier New', monospace;
+        }
+
+        .answer-option:hover {
+            background: #f3f4f6;
+            border-color: #d1d5db;
+            transform: translateX(4px);
+        }
+
+        .answer-option.selected {
+            background: #f3f0ff;
+            border-color: #8b5cf6;
+            color: #7c3aed;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: "Playwrite IT Moderna", cursive;
+        }
+
+        .btn-back {
+            background: transparent;
+            color: #8b5cf6;
+            border: 2px solid transparent;
+        }
+
+        .btn-back:hover {
+            color: #7c3aed;
+        }
+
+        .btn-skip {
+            background: transparent;
+            color: #8b5cf6;
+            border: 2px solid transparent;
+        }
+
+        .btn-skip:hover {
+            color: #7c3aed;
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-next:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-next:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .quiz-container {
+                padding: 0 10px;
+            }
+
+            .question-card {
+                padding: 24px 20px;
+            }
+
+            .answer-option {
+                padding: 16px 20px;
+                font-size: 13px;
+            }
+
+            .navigation-buttons {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .btn {
+                padding: 10px 24px;
+                font-size: 14px;
+            }
+        }

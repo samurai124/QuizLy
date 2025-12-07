@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Styles/resultPageCss.css">
+    <title>Quiz Results</title>
+</head>
+<body>
+    <div class="results-card">
+        <h1 class="results-title">8 / 10 Correct</h1>
+        <p class="results-message">Great job! You're improving fast.</p>
+
+        <div class="score-circle">
+            <svg class="circle-svg" width="120" height="120">
+                <circle class="circle-bg" cx="60" cy="60" r="45"></circle>
+                <circle class="circle-progress" cx="60" cy="60" r="45" style="--progress: 56.5;"></circle>
+            </svg>
+            <div class="score-text" id="scor_percent">80%</div>
+        </div>
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-label" id="correct_answers">Correct Answers:</span> 8
+            </div>
+            <div class="stat-item">
+                <span class="stat-label" id="wrong_answers">Incorrect Answers:</span> 2
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button class="btn btn-retake" onclick="retakeQuiz()">Retake Quiz</button>
+            <button class="btn btn-categories" onclick="goToCategories()">Go to Categories</button>
+        </div>
+    </div>
+
+    <script src="/JavaScript/result.js">
+        
+    </script>
+</body>
+</html>
